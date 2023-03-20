@@ -13,9 +13,9 @@ class BooksController < ApplicationController
       render :new
     end
   end
-  
+
   def index
-    @books = Book.page(params[:page]).reberse_order
+    
   end
 
   def show
@@ -31,7 +31,7 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:image, :caption)
+    params.require(:book).permit(:name, :image, :caption)
   end
 
 end
