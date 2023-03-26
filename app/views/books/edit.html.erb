@@ -1,0 +1,24 @@
+<p id="notice"></p>
+<div class="container">
+  <dic class="row">
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+      <h1>Editing Book</h1>
+      <%= form_with model: @book do |f| %>
+        <div class="form-group">
+          <label for="book_title">Title</label><br />
+          <%= f.text_field:title %>
+        </div>
+        <div class="form_group">
+          <label for="book_body">Opinion</label><br />
+          <%= f.text_field:body %>
+        </div>
+        <div class="form_group"><br />
+          <%= f.submit "Update Book", class: "btn btn-success" %>
+        </div>
+      <% end %><br />
+      <%= link_to "Show",book_path(current_user.id) %>
+      |
+      <%= link_to "Back",book_url %>
+    </div>
+  </dic>
+</div>
