@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  
+
   before_action :correct_user, only: [:edit, :update]
 
   def show
@@ -24,7 +24,7 @@ class UsersController < ApplicationController
     @book = Book.new(book_params)
     @book.user_id = current_user.id
     if @book.save
-      flash[:notice] = "Welcome! You have signed up successfully."
+      flash[:notice] = "You have created book successfully."
       redirect_to book_path(@book.id)
     else
       @books = Book.all
