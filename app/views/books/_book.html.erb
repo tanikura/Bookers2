@@ -1,0 +1,13 @@
+<%= form_with model: @book_new do |f| %>
+  <div class="form_title row">
+    <%= f.label :Title %>
+    <%= f.text_field :title, class: "col-md-3" %>
+  </div>
+  <div class="form_body row">
+    <%= f.label :Opinion %>
+    <%= f.text_area :body, class: "col-md-3" %>
+  </div>
+  <div class="actions row">
+    <%= f.submit class: "btn btn-primary col-md-3" %>
+  </div>
+<% end %>
