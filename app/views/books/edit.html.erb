@@ -12,7 +12,7 @@
   <dic class="row">
     <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
       <h1>Editing Book</h1>
-      <%= form_with model: @books do |f| %>
+      <%= form_with model: @book do |f| %>
         <div class="form-group">
           <label for="book_title">Title</label><br />
           <%= f.text_field:title %>
@@ -25,9 +25,9 @@
           <%= f.submit "Update Book", class: "btn btn-success" %>
         </div>
       <% end %><br />
-      <%= link_to "Show",book_path(current_user.id) %>
+      <%= link_to "Show",book_path(@book.id) %>
       |
-      <%= link_to "Back",book_url %>
+      <%= link_to "Back",books_path %>
     </div>
   </dic>
 </div>
